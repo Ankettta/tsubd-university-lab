@@ -408,30 +408,25 @@ DROP VIEW IF EXISTS v_course_popularity;
 DROP MATERIALIZED VIEW IF EXISTS mv_course_popularity;
 
 ----------------------------------------------------------------------
---(ДЗ размещены под разделами, то, что ниже пока не используем)
--- ЗАДАНИЕ 1 (CTE):
--- Найдите студентов, у которых средняя посещаемость >= 85 по всем курсам.
--- Выведите: student_id, ФИО, avg_attendance.
+--(ДЗ 2.2 выполняется после практики 20.11)
 
--- ЗАДАНИЕ 2 (CTE + TOP-N):
--- Выведите TOP-3 кафедры по среднему GPA студентов (major_department),
 
--- ЗАДАНИЕ 3 (VIEW):
+-- ЗАДАНИЕ 1 (VIEW):
 -- Создайте VIEW v_instructor_salary_level:
 --   salary >= 100000 -> 'high'
 --   salary >= 70000  -> 'mid'
 --   иначе            -> 'low'
 -- Затем посчитайте, сколько преподавателей в каждой категории.
 
--- ЗАДАНИЕ 4 (TEMP):
+-- ЗАДАНИЕ 2 (TEMP):
 -- Создайте TEMP таблицу tmp_failed_enrollments (is_passed = false).
 -- Выведите: топ-10 курсов с максимальным числом провалов (id, число провалов).
 
--- ЗАДАНИЕ 5 (VIEW + CTE):
+-- ЗАДАНИЕ 3 (VIEW + CTE):
 -- На основе v_student_course_enrollments найдите студентов, у которых >= 2 оценок 'F'.
 -- Выведите student_id, ФИО, count_f.
 
--- ЗАДАНИЕ 6 (MATERIALIZED VIEW):
+-- ЗАДАНИЕ 4 (MATERIALIZED VIEW):
 -- Создайте MATERIALIZED VIEW по средней посещаемости курсов:
 --   course_id, code, title, avg_attendance, enroll_count
 -- Создайте индекс на avg_attendance DESC.
